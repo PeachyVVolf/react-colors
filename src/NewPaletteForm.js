@@ -26,6 +26,7 @@ const styles = theme => ({
     }),
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
     height: "64px"
   },
   appBarShift: {
@@ -40,7 +41,13 @@ const styles = theme => ({
     marginRight: theme.spacing(2),
   },
   navBtns: {
-
+    marginRight: "1rem",
+    "& a":{
+      textDecoration: "none"
+    }
+  },
+  btnNav: {
+    margin: "0 0.5rem"
   },
   hide: {
     display: 'none',
@@ -141,11 +148,10 @@ class NewPaletteForm extends Component {
     })
   }
 
-  handleSubmit(newPaletteName) {
-    const newPalette = {
-      paletteName: newPaletteName, 
-      id: newPaletteName.toLowerCase().replace(/ /g, "-"),
-      colors: this.state.colors}
+  handleSubmit(newPalette) {
+    newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, "-");
+    newPalette.colors =  this.state.colors;
+
     this.props.savePalette(newPalette)
     this.props.history.push("/");
   }
@@ -204,8 +210,8 @@ class NewPaletteForm extends Component {
             <div className={classes.container}>
               <Typography variant="h4" gutterBottom>Design You Palette</Typography>
                 <div className={classes.buttons}>
-                    <Button className={classes.button} variant="contained" color="secondary" onClick={this.clearColors} diabled={paletteIsFull}>Clear Palette</Button>
-                    <Button className={classes.button} variant="contained" color="primary" onClick={this.addRandomColor}>Random Color</Button>
+                    <Button className={classes.button} variant="contained" color="secondary" onClick={this.clearColors} >Clear Palette</Button>
+                    <Button className={classes.button} variant="contained" color="primary" onClick={this.addRandomColor} disabled={paletteIsFull}>Random Color</Button>
                 </div>
 
               <ColorPickerForm paletteIsFull={paletteIsFull} addNewColor={this.addNewColor} colors={this.state.colors}/>
