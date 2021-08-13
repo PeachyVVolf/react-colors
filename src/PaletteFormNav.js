@@ -56,8 +56,10 @@ class PaletteFormNav extends Component {
                         <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" noWrap>
-                            Persistent drawer
+                            Create A Palette
                         </Typography>
+                    </Toolbar>
+                    <div className={classes.navBtns} >
                         <ValidatorForm onSubmit={() => this.props.handleSubmit(this.state.newPaletteName)}>
                             <TextValidator 
                             label="Palette Name" 
@@ -67,12 +69,13 @@ class PaletteFormNav extends Component {
                             validaors={["required", "isPaletteNameUnique"]}
                             errorMessage={["Enter Palette Name", "Name already used"]}
                             />
-                            <Link to='/'>
-                            <Button variant="contained" color="secondary"> Back </Button>
-                            </Link>
                             <Button variant="contained" color="primary" type="submit">Save Palette</Button>
                         </ValidatorForm>
-                    </Toolbar>
+                        
+                        <Link to='/'>
+                            <Button variant="contained" color="secondary"> Back </Button>
+                        </Link>
+                    </div>
                 </AppBar>
             </div>
          );
