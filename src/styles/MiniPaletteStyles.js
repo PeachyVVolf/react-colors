@@ -49,7 +49,7 @@ export default {
         right: "0px",
         top: "0px",
         padding: "10px",
-        zIndex: 10,
+        zIndex: 20,
         opacity: 0,
         
     }
