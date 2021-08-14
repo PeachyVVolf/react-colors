@@ -1,3 +1,4 @@
+## Description
 A React App that Displays different Palettes saved in the users browser (9 by default).
 ![image](https://user-images.githubusercontent.com/58062082/129461397-7cc43d9b-a974-4955-b72d-2599ef246ab6.png)
 
@@ -13,10 +14,10 @@ Theres a color picker to add new palettes so you can add any color or any shade 
 ![image](https://user-images.githubusercontent.com/58062082/129461627-6266a7c1-c5ec-4b68-b84a-9ee263c1940b.png)
 
 And the new Palettes will be saved to your localStorage.
-
+## How to Run Code
 To download and run this code:
 1. Download Zip file and open in your preferred code editor.
-2. Install the dependencies 
-###npm install###
-4. Run the code using
-###npm start###
+2. Install the dependencies <br />
+``` npm install ```
+4. Run the code using<br />
+``` npm start ```
