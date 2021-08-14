@@ -16,5 +16,7 @@ And the new Palettes will be saved to your localStorage.
 
 To download and run this code:
 1. Download Zip file and open in your preferred code editor.
-2. Install the dependencies ###npm install###
-3. Run the code using ###npm start###
+2. Install the dependencies 
+###npm install###
+4. Run the code using
+###npm start###
